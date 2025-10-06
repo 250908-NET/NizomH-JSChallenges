@@ -8,3 +8,17 @@ const AddHobby = () => {
     hobby_li.innerText = hobby
     hobbies.appendChild(hobby_li);
 }
+
+const ListHobbies = () => {
+    const hobbies_li = document.querySelectorAll("#hobbies > li");
+    const hobbies = [];
+    
+    hobbies_li.forEach(li => {
+        const hobbyText = li.innerText.trim();
+        if (hobbyText !== "") {
+            hobbies.push(hobbyText);
+        }
+    });
+
+    alert(hobbies.join(", "));
+}
