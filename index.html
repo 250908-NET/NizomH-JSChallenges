@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./main.css" rel="stylesheet" type="text/css" />
+    <script src="index.js"></script>
     <title>About Me</title>
 </head>
 <body>
@@ -15,13 +16,17 @@
         </section>
         <section>
             <h2>My Hobbies</h2>
-            <ul>
+            <ul id="hobbies">
                 <li>Programming</li>
                 <li>Chess</li>
                 <li>Watching TV Shows</li>
                 <li>Playing Video Games</li>
                 <li>Trying New Food</li>
             </ul>
+            <div>
+                <input type="text" id="hobby" />
+                <button onclick="AddHobby()">Add Hobby</button>
+            </div>
         </section>
         <section>
             <h2>Me At Work</h2>
