@@ -1,0 +1,26 @@
+body {
+    background-color: lightblue;
+    font-family: sans-serif;
+}
+
+main {
+    background-color: white;
+    width: 60vw;
+    min-width: 400px;
+    margin: 0 auto;
+    margin-top: 10vh;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+h1 {
+    color: darkblue;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+}
+li {
+    margin-right: 2rem;
+}
