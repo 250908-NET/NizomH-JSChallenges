@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>JS Button Example</title>
+    <title>Greeting Input</title>
   </head>
   <body>
-    <h1>Click the Button!</h1>
-
-    <button onclick="sayHello()">Say Hello</button>
+    <h2>Enter your name:</h2>
+    <input type="text" id="nameInput" placeholder="Your name here">
+    <button onclick="greetUser()">Greet Me</button>
 
     <script>
-      function sayHello() {
-        alert("Hello from JavaScript!");
+      function greetUser() {
+        let name = document.getElementById("nameInput").value;
+        alert("Hello, " + name + "!");
       }
     </script>
   </body>
