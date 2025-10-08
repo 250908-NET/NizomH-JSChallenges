@@ -4,19 +4,14 @@
     <title>Greeting Input</title>
   </head>
   <body>
-    <h2>Enter your name:</h2>
-    <input type="text" id="nameInput" placeholder="Your name here">
-    <button onclick="greetUser()">Greet Me</button>
+    <h2>Enter a number to square:</h2>
+    <input type="number" id="number" placeholder="number">
+    <button onclick="squareNumber()">Square It!</button>
 
     <script>
-      function greetUser() {
-        let name = document.getElementById("nameInput").value;
-        if (name == "") {
-          alert("Please enter your name first!");
-        }
-        else {
-          alert("Hello, " + name + "!");
-        }
+      function squareNumber() {
+        let number = document.getElementById("number").value;
+        alert(`The square is ${number ** 2}`);
       }
     </script>
   </body>
