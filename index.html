@@ -4,12 +4,22 @@
     <title>Color Changer</title>
   </head>
   <body>
-    <p id="text">Change my color!</p>
+    <p id="text">This is a paragraph!</p>
+    <button onclick="highlightP()">Highlight</button>
+    <button onclick="resetP()">Reset</button>
 
     <script>
-      let text = document.getElementById("text");
-      text.style.color = "blue";
-      text.style.fontSize = "24px";
+      function highlightP () {
+        let text = document.getElementById("text");
+        text.style.color = "red";
+        text.style.fontWeight = "bold";
+      }
+      function resetP () {
+        let text = document.getElementById("text");
+        text.style.color = "black";
+        text.style.fontWeight = "normal";
+      }
+
     </script>
   </body>
 </html>
