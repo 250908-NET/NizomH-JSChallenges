@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Color Changer</title>
+    <title>List Appender</title>
   </head>
   <body>
-    <p id="text">This is a paragraph!</p>
-    <button onclick="highlightP()">Highlight</button>
-    <button onclick="resetP()">Reset</button>
+    <h2>List</h2>
+    <ul id="list"></ul>
+    <button onclick="appendList()">Add to List</button>
 
     <script>
-      function highlightP () {
-        let text = document.getElementById("text");
-        text.style.color = "red";
-        text.style.fontWeight = "bold";
-      }
-      function resetP () {
-        let text = document.getElementById("text");
-        text.style.color = "black";
-        text.style.fontWeight = "normal";
+      function appendList () {
+        let list = document.getElementById("list");
+        let element = document.createElement("li");
+        element.textContent = "New Item";
+        list.appendChild(element);
       }
 
     </script>
