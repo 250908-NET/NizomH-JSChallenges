@@ -1,14 +1,9 @@
 
-document.getElementById('loadBtn').addEventListener('click', () => {
-  fetch('https://jsonplaceholder.typicode.com/posts')
-  .then(response => (
-    response.json()
-  ))
-  .then(posts => {
-    posts.slice(0, 5).forEach(post => {
-      const item = document.createElement('div');
-      item.innerHTML = `<h3>${post.title}</h3><p>${post.body}</p>`;
-      document.body.appendChild(item);
-    }); 
-  })
+document.getElementById('fetchBtn').addEventListener('click', () => {
+  const id = document.getElementById('postId').value;
+  fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById('output').innerHTML = `<h2>${data.title}</h2><p>${data.body}</p>`;
+    });
 });
