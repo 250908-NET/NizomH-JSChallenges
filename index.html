@@ -4,16 +4,19 @@
     <title>List Appender</title>
   </head>
   <body>
-    <h2>List</h2>
-    <ul id="list"></ul>
-    <button onclick="appendList()">Add to List</button>
+    <img id="animal" src="./cat.png" alt="cat" />
+    <button onclick="toggleAnimal()">Switch Animal</button>
 
     <script>
-      function appendList () {
-        let list = document.getElementById("list");
-        let element = document.createElement("li");
-        element.textContent = "New Item";
-        list.appendChild(element);
+      function toggleAnimal () {
+        let img = document.getElementById("animal");
+        if (img.alt ==  "cat") {
+          img.src = "./dog.png";
+          img.alt = "dog";
+        } else {
+          img.src = "./cat.png";
+          img.alt = "cat";
+        }
       }
 
     </script>
