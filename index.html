@@ -4,19 +4,15 @@
     <title>List Appender</title>
   </head>
   <body>
-    <img id="animal" src="./cat.png" alt="cat" />
-    <button onclick="toggleAnimal()">Switch Animal</button>
+    <button onclick="changeColor()">Change Color!</button>
 
     <script>
-      function toggleAnimal () {
-        let img = document.getElementById("animal");
-        if (img.alt ==  "cat") {
-          img.src = "./dog.png";
-          img.alt = "dog";
-        } else {
-          img.src = "./cat.png";
-          img.alt = "cat";
-        }
+      function changeColor () {
+        let red = Math.floor(Math.random() * 256);
+        let green = Math.floor(Math.random() * 256);
+        let blue = Math.floor(Math.random() * 256);
+
+        document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
       }
 
     </script>
