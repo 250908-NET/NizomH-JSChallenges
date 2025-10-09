@@ -1,8 +1,12 @@
 
-fetch('https://jsonplaceholder.typicode.com/posts/1')
+fetch('https://jsonplaceholder.typicode.com/posts')
 .then(response => (
   response.json()
 ))
-.then(data => {
-  document.getElementById('output').innerHTML = `<h2>${data.title}</h2><p>${data.body}</p>`;
+.then(posts => {
+  posts.slice(0, 5).forEach(post => {
+    const item = document.createElement('div');
+    item.innerHTML = `<h3>${post.title}</h3><p>${post.body}</p>`;
+    document.body.appendChild(item);
+  }); 
 })
