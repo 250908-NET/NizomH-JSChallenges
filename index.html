@@ -2,17 +2,20 @@
 <html>
   <head>
     <title>List Appender</title>
+    <style>
+      .darkMode {
+        background-color: darkgray;
+        color: white;
+      }
+    </style>
   </head>
   <body>
-    <button onclick="changeColor()">Change Color!</button>
+    <h1>Hello World!</h1>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
     <script>
-      function changeColor () {
-        let red = Math.floor(Math.random() * 256);
-        let green = Math.floor(Math.random() * 256);
-        let blue = Math.floor(Math.random() * 256);
-
-        document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+      function toggleDarkMode () {
+        document.body.classList.toggle("darkMode");
       }
 
     </script>
