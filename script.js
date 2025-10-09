@@ -1,11 +1,8 @@
-const square = n => n*n;
 
-const nums = [1, 2, 3, 4, 5];
-const squares = nums.map(num => square(num));
-
-const numbers = [10, 15, 20, 25, 30];
-const evens = numbers.filter(num => num % 2 == 0);
-
-const makeBook = (title, author) => ({title, author});
-
-console.log(makeBook("Harry Potter", "JKR"));
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+.then(response => (
+  response.json()
+))
+.then(data => {
+  document.getElementById('output').innerHTML = `<h2>${data.title}</h2><p>${data.body}</p>`;
+})
